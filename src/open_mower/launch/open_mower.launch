@@ -37,6 +37,11 @@
         <param name="motor_cold_temperature" value="$(env OM_MOWING_MOTOR_TEMP_LOW)"/>
         <param name="gps_wait_time" value="$(optenv OM_GPS_WAIT_TIME_SEC 10.0)"/>
         <param name="gps_timeout" value="$(optenv OM_GPS_TIMEOUT_SEC 10.0)"/>
+        <param name="docking_approach_distance" value="$(env OM_DOCKING_APPROACH_DISTANCE)"/>
+        <param name="undock_angled_distance" value="$(optenv OM_UNDOCK_ANGLED_DISTANCE 0.0)"/>
+        <param name="undock_angle" value="$(optenv OM_UNDOCK_ANGLE 0.0)"/>
+        <param name="undock_fixed_angle" value="$(optenv OM_UNDOCK_FIXED_ANGLE True)"/>
+        <param name="undock_use_curve" value="$(optenv OM_UNDOCK_USE_CURVE True)"/>
     </node>
     <node pkg="slic3r_coverage_planner" type="slic3r_coverage_planner" name="slic3r_coverage_planner" output="screen"/>
 
